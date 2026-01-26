@@ -2,6 +2,10 @@
   "name": "@garden-care/source",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "start": "nx serve api",
     "start:web": "nx serve web",

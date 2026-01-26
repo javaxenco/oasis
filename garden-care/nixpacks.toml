@@ -1,0 +1,14 @@
+# Nixpacks configuration for Railway deployment
+# This tells Railway how to build and run your Oasis Garden Care API
+
+[phases.setup]
+nixPkgs = ['nodejs_20']
+
+[phases.install]
+cmds = ['npm ci']
+
+[phases.build]
+cmds = ['npm run build:api:prod', 'npx prisma generate']
+
+[start]
+cmd = 'npx prisma migrate deploy && node dist/apps/api/main.js'
