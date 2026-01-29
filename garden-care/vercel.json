@@ -1,18 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "name": "oasis-garden-care",
   "buildCommand": "npm run build:web:prod",
   "outputDirectory": "dist/apps/web/browser",
-  "framework": null,
   "installCommand": "npm install",
   "devCommand": "npm run start:web",
   "regions": ["iad1"],
-  "public": false,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
